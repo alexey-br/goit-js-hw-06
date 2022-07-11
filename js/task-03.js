@@ -12,3 +12,9 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const gallaryMarkup = images.map(({ url, alt }) => `<li><img src="${url}" alt="${alt}"></li>`).join('');
+
+const gallaryListRef = document.querySelector('.gallery');
+
+gallaryListRef.innerHTML = gallaryMarkup;
